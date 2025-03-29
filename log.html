@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Login</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212; /* Dark background for the theme */
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background: #1e1e1e; /* Slightly lighter dark shade for contrast */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+            border: 1px solid #323232; /* Subtle border for premium look */
+            text-align: center;
+        }
+        .logo {
+            margin-bottom: 20px;
+        }
+        .brand-name {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #d4af37; /* Gold color for premium branding */
+            font-weight: bold;
+        }
+        input, button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #333333;
+            border-radius: 5px;
+            background-color: #2b2b2b;
+            color: #ffffff;
+        }
+        button {
+            background-color: #d4af37; /* Gold for the button */
+            color: #000000; /* Contrast text */
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #b8860b; /* Slightly darker gold on hover */
+        }
+        input::placeholder {
+            color: #cccccc; /* Soft placeholder text */
+        }
+    </style>
+    <script>
+        function validateForm(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value.trim();
+            const email = document.getElementById('email').value.trim();
+
+            if (username === '' || email === '') {
+                alert('Please fill out all fields correctly.');
+                return false;
+            }
+            
+            // Redirect to index.html after validation
+            window.location.href = "welcome.html";
+            return true;
+        }
+
+        // Handle "Enter" key press for form submission
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+                const form = document.querySelector('form');
+                form.dispatchEvent(new Event('submit', { cancelable: true }));
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="login-container">
+        <!-- Logo Section -->
+        <div class="logo">
+            <img src="logo.webp" alt="Brand Logo" width="100"> <!-- Replace 'logo.webp' with your actual logo -->
+        </div>
+        <!-- Brand Name -->
+        <div class="brand-name">GURU JI-AI</div>
+        <!-- Login Form -->
+        <h2>Login</h2>
+        <form onsubmit="validateForm(event);">
+            <input id="username" type="text" placeholder="Username" required>
+            <input id="email" type="email" placeholder="E-Mail" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>

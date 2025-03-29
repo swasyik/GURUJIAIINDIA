@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Chatbot - Namaste!</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff9933, #ffffff, #138808); /* Indian flag colors */
+      color: #333;
+      overflow: hidden;
+    }
+
+    header {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      border: 2px solid #138808;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      margin: 0;
+      color: #ff9933;
+      font-family: 'Georgia', serif;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      color: #138808;
+    }
+
+    .cta-button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 1.1rem;
+      color: #fff;
+      background: linear-gradient(135deg, #138808, #ff9933);
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0px 4px 10px rgba(19, 136, 8, 0.5);
+    }
+
+    .cta-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 6px 15px rgba(19, 136, 8, 0.7);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    /* Add a subtle floating animation */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    header {
+      animation: float 4s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>नमस्ते!</h1>
+    <p>Welcome to  GURU-JI AI ChatBot – Your intelligent assistant, always at your service.</p>
+    <button class="cta-button" onclick="window.location.href='INDEX.HTML';">शुरू करें (Start Chatting)</button>
+  </header>
+  <footer>
+    <p>© 2025 pattanayak industry. All Rights Reserved. 🇮🇳</p>
+  </footer>
+</body>
+</html>
